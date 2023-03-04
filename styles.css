@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;500&display=swap');
+
+/* prepare styles */
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  position: relative;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  background: url('./assets/bg-blured.png') fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: whitesmoke;
+}
+
+.container,
+.main {
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* card styles */
+
+.card {
+  background-color: rgba(9, 29, 70, 0.8);
+  padding: 2rem;
+  border-radius: 30px;
+  width: 100%;
+  max-height: 30rem;
+  max-width: 420px;
+  margin: 2rem;
+}
+
+/* search block styles */
+
+.search-block {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.search-btn {
+  border-radius: 50%;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 3rem;
+  width: 3rem;
+  background: rgba(143, 158, 255, 0.427);
+}
+
+.search-btn:hover {
+  background: rgba(143, 158, 255, 0.562);
+  cursor: pointer;
+  transition: 0.4s ease-in-out;
+}
+
+.search-svg {
+  fill: white;
+}
+
+.search-bar {
+  outline: none;
+  border: none;
+  padding: 0.8rem;
+  border-radius: 9px;
+  width: calc(100% - 4rem);
+  background: rgba(143, 158, 255, 0.427);
+  font-family: inherit;
+  color: white;
+  font-size: 1rem;
+}
+
+.search-bar:focus {
+  background: rgba(143, 158, 255, 0.562);
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+}
+
+.search-bar::placeholder {
+  color: rgba(255, 255, 255, 0.29);
+}
+
+/* weather block styles */
+
+.weather-block {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.temperature-block {
+  display: flex;
+  align-items: center;
+  margin: 20px 0px;
+}
+
+.description {
+  text-transform: capitalize;
+}
+
+/* media querries */
+
+@media screen and (max-width: 600px) {
+  .temperature-block {
+    margin: 0.1rem 0px;
+  }
+
+  .city-heading {
+    font-size: 2rem;
+  }
+
+  .description,
+  .humidity,
+  .wind {
+    font-size: 0.8rem;
+    text-align: left;
+  }
+
+  .temperature {
+    font-size: 1.8rem;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .city-heading {
+    font-size: 0.9rem;
+  }
+}
